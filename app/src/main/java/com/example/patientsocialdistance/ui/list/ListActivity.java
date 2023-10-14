@@ -10,6 +10,7 @@ import android.os.Bundle;
 import com.example.patientsocialdistance.R;
 import com.example.patientsocialdistance.databinding.ActivityListBinding;
 import com.example.patientsocialdistance.ui.accept_appointments.AcceptAppointmentsActivity;
+import com.example.patientsocialdistance.ui.block_list.BlocklistActivity;
 import com.example.patientsocialdistance.ui.interactionlist.InteractionListActivity;
 import com.example.patientsocialdistance.ui.patient_schedule.PatientScheduleActivity;
 import com.example.patientsocialdistance.ui.visit_schedule.VisitSheduleActivity;
@@ -46,6 +47,11 @@ public class ListActivity extends AppCompatActivity {
 
         binding.whoGuideTV.setOnClickListener(view -> {
             navigationIntent = new Intent(this, WhoGuideActivity.class);
+            startActivity(navigationIntent);
+        });
+
+        binding.blockListTV.setOnClickListener(view -> {
+            navigationIntent = new Intent(this, BlocklistActivity.class);
             startActivity(navigationIntent);
         });
     }
