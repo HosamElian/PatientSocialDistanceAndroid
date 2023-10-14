@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">PatientSocialDistance</string>
+    <string name="confirm">Confirm</string>
+    <string name="you_date">You Date</string>
+    <string name="who_guide">Who Guide</string>
+    <string name="user">User</string>
+    <string name="date">Date</string>
+    <string name="ok">OK</string>
+    <string name="calender">Calender</string>
+    <string name="register_new_account">Register New Account</string>
+    <string name="name_login">Name:</string>
+    <string name="age_login">Age:</string>
+    <string name="national_id_login">National ID:</string>
+    <string name="phone_number_login">Phone Number:</string>
+    <string name="e_mail_login">E-mail:</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="phone_number">phone number</string>
+    <string name="hospital">Hospital</string>
+    <string name="name">Name</string>
+    <string name="log_in">Log in</string>
+    <string name="register">Register</string>
+    <string name="usernam_login">UserNam:</string>
+    <string name="interactions_list">Interactions List</string>
+    <string name="patient_schedule">Patient Schedule</string>
+    <string name="accept_appointments">Accept appointments</string>
+    <string name="visit_schedule">Visit Schedule</string>
+    <string name="blocklist">Blocklist</string>
+    <string name="time">Time</string>
+    <string name="month">Month</string>
+    <string name="day">Day</string>
+    <string name="request">Request</string>
+    <string name="password_confirmation">Password Confirmation</string>
 </resources>

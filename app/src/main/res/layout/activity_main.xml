@@ -1,62 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/login_background"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".ui.login.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <EditText
-        android:id="@+id/usernameLoginET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_border_violate"
-        android:padding="10dp"
-        android:hint="UserNam:"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="text" />
+    <data>
 
-    <EditText
-        android:id="@+id/passwordLoginET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:hint="Password"
-        android:background="@drawable/rounded_border_violate"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:inputType="textPassword" />
+    </data>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp">
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/loginBT"
-            android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".ui.login.MainActivity">
+
+        <EditText
+            android:id="@+id/usernameLoginET"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Log in"
-            android:textSize="20dp"
+            android:background="@drawable/rounded_border_violate"
+            android:padding="10dp"
+            android:hint="@string/usernam_login"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/passwordLoginET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="@string/password"
             android:background="@drawable/rounded_border_violate"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/registerBT"
-            android:layout_width="0dp"
+            android:layout_marginRight="10dp"
+            android:inputType="textPassword" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Register"
-            android:textSize="20dp"
-            android:background="@drawable/rounded_border_red_degree"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginTop="10dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/loginBT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/log_in"
+                android:textSize="20sp"
+                android:background="@drawable/rounded_border_violate"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/registerBT"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/register"
+                android:textSize="20sp"
+                android:background="@drawable/rounded_border_red_degree"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+        </LinearLayout>
+
+
     </LinearLayout>
-
-
-
-</LinearLayout>
+</layout>

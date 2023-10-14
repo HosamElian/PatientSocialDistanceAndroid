@@ -1,107 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/login_background"
-    android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".ui.register.RegisterActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register New Account"
-        android:textSize="24sp"/>
-    <EditText
-        android:id="@+id/nameRegisterET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_border_violate"
-        android:padding="10dp"
-        android:hint="Name:"
-        android:textColorHint="@color/black"
-        android:alpha="0.75"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="text"/>
-    <EditText
-        android:id="@+id/ageRegisterET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_border_violate"
-        android:padding="10dp"
-        android:hint="Age:"
-        android:textColorHint="@color/black"
-        android:alpha="0.75"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="text"/>
-    <EditText
-        android:id="@+id/nationalIdRegisterET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_border_violate"
-        android:padding="10dp"
-        android:hint="National ID:"
-        android:textColorHint="@color/black"
-        android:alpha="0.75"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="number"/>
-    <EditText
-        android:id="@+id/phoneNumberRegisterET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_border_violate"
-        android:hint="Phone Number:"
-        android:textColorHint="@color/black"
-        android:alpha="0.75"
-        android:padding="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="phone"/>
-    <EditText
-        android:id="@+id/emailRegisterET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_border_violate"
-        android:alpha="0.75"
-        android:hint="E-mail:"
-        android:textColorHint="@color/black"
-        android:padding="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="textEmailAddress" />
+    <data>
 
-    <EditText
-        android:id="@+id/passwordRegisterET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded_border_violate"
-        android:alpha="0.75"
-        android:hint="Password"
-        android:textColorHint="@color/black"
-        android:padding="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="textPassword" />
+    </data>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/submitRegisterBT"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:textSize="20sp"
-        android:background="@drawable/rounded_border_yellow"
-        android:alpha="0.75"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:background="@drawable/login_background"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".ui.register.RegisterActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_new_account"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/nameRegisterET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border_violate"
+            android:padding="10dp"
+            android:hint="@string/name_login"
+            android:textColorHint="@color/black"
+            android:alpha="0.75"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/ageRegisterET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border_violate"
+            android:padding="10dp"
+            android:hint="@string/age_login"
+            android:textColorHint="@color/black"
+            android:alpha="0.75"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/nationalIdRegisterET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border_violate"
+            android:padding="10dp"
+            android:hint="@string/national_id_login"
+            android:textColorHint="@color/black"
+            android:alpha="0.75"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/phoneNumberRegisterET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border_violate"
+            android:hint="@string/phone_number_login"
+            android:textColorHint="@color/black"
+            android:alpha="0.75"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/emailRegisterET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border_violate"
+            android:alpha="0.75"
+            android:hint="@string/e_mail_login"
+            android:textColorHint="@color/black"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/passwordRegisterET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border_violate"
+            android:alpha="0.75"
+            android:hint="@string/password"
+            android:textColorHint="@color/black"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPassword" />
+
+        <EditText
+            android:id="@+id/passwordConfirmationRegisterET"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_border_violate"
+            android:alpha="0.75"
+            android:hint="@string/password_confirmation"
+            android:textColorHint="@color/black"
+            android:padding="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPassword" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submitRegisterBT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/submit"
+            android:textSize="20sp"
+            android:background="@drawable/rounded_border_yellow"
+            android:alpha="0.75"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" />
+    </LinearLayout>
+</layout>

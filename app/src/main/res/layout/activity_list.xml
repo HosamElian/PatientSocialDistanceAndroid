@@ -1,98 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/safe_spot_list"
-    tools:context=".ui.list.ListActivity">
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="vertical"/>
-    <LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="4"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Interactions List"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:background="@drawable/rounded_border_white"
-        android:layout_margin="10dp"
-        android:padding="10dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Patient Schedule"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:background="@drawable/rounded_border_white"
-        android:layout_margin="10dp"
-        android:padding="10dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Visit Schedule"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:background="@drawable/rounded_border_white"
-        android:layout_margin="10dp"
-        android:padding="10dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Accept appointments"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:background="@drawable/rounded_border_white"
-        android:layout_margin="10dp"
-        android:padding="10dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="WHO Guide"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:background="@drawable/rounded_border_white"
-        android:layout_margin="10dp"
-        android:padding="10dp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/safe_spot_list"
+        tools:context=".ui.list.ListActivity">
 
-</LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:background="@drawable/rounded_border_white"
-        android:layout_margin="5dp"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="3"
-            android:text="Blocklist"
-            android:textColor="@color/blue"
-            android:gravity="center_vertical"
-            android:textSize="24sp"
-            android:layout_margin="10dp"
-            android:padding="10dp"/>
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/interactionTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/interactions_list"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:background="@drawable/rounded_border_white"
+                android:layout_margin="10dp"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/patientScheduleTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/patient_schedule"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:background="@drawable/rounded_border_white"
+                android:layout_margin="10dp"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/visitTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/visit_schedule"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:background="@drawable/rounded_border_white"
+                android:layout_margin="10dp"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/acceptAppointmentsTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/accept_appointments"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:background="@drawable/rounded_border_white"
+                android:layout_margin="10dp"
+                android:padding="10dp" />
+
+            <TextView
+                android:id="@+id/whoGuideTV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/who_guide"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:background="@drawable/rounded_border_white"
+                android:layout_margin="10dp"
+                android:padding="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="0"
-            android:textColor="@color/white"
-            android:background="@drawable/circle_border_red_degree"
-            android:gravity="center"
-            android:textSize="24sp"
-            android:layout_margin="10dp"/>
-    </LinearLayout>
+            android:background="@drawable/rounded_border_white"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
 
-</LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="@string/blocklist"
+                android:textColor="@color/blue"
+                android:gravity="center_vertical"
+                android:textSize="24sp"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="0"
+                android:textColor="@color/white"
+                android:background="@drawable/circle_border_red_degree"
+                android:gravity="center"
+                android:textSize="24sp"
+                android:layout_margin="10dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
