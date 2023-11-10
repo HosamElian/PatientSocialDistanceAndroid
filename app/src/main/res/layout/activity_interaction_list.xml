@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="interactionListViewModel"
+            type="com.example.patientsocialdistance.ui.interactionlist.InteractionListViewModel" />
     </data>
 
     <LinearLayout

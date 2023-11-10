@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="appointViewModel"
+            type="com.example.patientsocialdistance.ui.accept_appointments.VisitAcceptAppointmentViewModel" />
     </data>
 
     <LinearLayout
@@ -12,156 +14,76 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".ui.accept_appointments.AcceptAppointmentsActivity">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:orientation="vertical"-->
+<!--            android:gravity="center">-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="Accept Appointment"-->
+<!--                android:gravity="center"-->
+<!--                android:textSize="40sp"-->
+<!--                android:textColor="@color/purple"-->
+<!--                android:textStyle="bold"/>-->
+<!--        </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/purple"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="@string/date"
-                android:gravity="center"
-                android:textSize="40dp"
-                android:textColor="@color/blue"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-                <TextView
-                    android:id="@+id/numberOfFirstDateTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="5"
-                    android:background="@drawable/circle_border_blue_light"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textColor="@color/white" />
-                <TextView
-                    android:id="@+id/monthOfFirstDateTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/month"
-                    android:textSize="18sp"
-                    android:textAlignment="center"
-                    />
-                <TextView
-                    android:id="@+id/dayOfFirstDateTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/day"
-                    android:textSize="18sp"
-                    android:textAlignment="center"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-                <TextView
-                    android:id="@+id/numberOfSecondDateTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="5"
-                    android:background="@drawable/circle_border_blue"
-                    android:gravity="center"
-                    android:text="1"
-                    android:textColor="@color/white" />
-                <TextView
-                    android:id="@+id/monthOfSecondDateTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/month"
-                    android:textSize="18sp"
-                    android:textAlignment="center"
-                    />
-                <TextView
-                    android:id="@+id/dayOfSecondDateTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/day"
-                    android:textSize="18sp"
-                    android:textAlignment="center"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:gravity="center">
-                <TextView
-                    android:id="@+id/numberOfThirdDateTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="5"
-                    android:background="@drawable/circle_border_blue_light"
-                    android:gravity="center"
-                    android:text="2"
-                    android:textColor="@color/white" />
-                <TextView
-                    android:id="@+id/monthOfThirdDateTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/month"
-                    android:textSize="18sp"
-                    android:textAlignment="center"
-                    />
-                <TextView
-                    android:id="@+id/dayOfThirdDateTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/day"
-                    android:textSize="18sp"
-                    android:textAlignment="center"
-                    />
-            </LinearLayout>
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:text="@string/filter_by_date"
+            android:textSize="24sp"
+            tools:ignore="NestedWeights" />
+        <ImageView
+            android:id="@+id/dateOfVisitFilterIV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:layout_weight="0.5"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <TextView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:textColor="@color/white"
-                android:background="@drawable/circle_border_blue"
-                android:gravity="center" />
+            android:contentDescription="@string/calender"
+            android:background="@color/white"
+            android:gravity="center"
+            android:scaleType="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="10dp"
+            android:src="@mipmap/ic_calender" />
+        <ImageView
+            android:id="@+id/clearFilterIV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@color/white"
+            android:gravity="center"
+            android:scaleType="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="30dp"
+            android:src="@mipmap/ic_reject" />
 
-        </LinearLayout>
+    </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="4"
             android:orientation="vertical"
             android:gravity="center">
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/appointmentsRequestedRV"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                 />
         </LinearLayout>
 
     </LinearLayout>

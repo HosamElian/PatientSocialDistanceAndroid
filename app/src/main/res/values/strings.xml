@@ -20,7 +20,7 @@
     <string name="name">Name</string>
     <string name="log_in">Log in</string>
     <string name="register">Register</string>
-    <string name="usernam_login">UserNam:</string>
+    <string name="usernam_login">Username:</string>
     <string name="interactions_list">Interactions List</string>
     <string name="patient_schedule">Patient Schedule</string>
     <string name="accept_appointments">Accept appointments</string>
@@ -31,4 +31,17 @@
     <string name="day">Day</string>
     <string name="request">Request</string>
     <string name="password_confirmation">Password Confirmation</string>
+    <string name="nationality">Nationality:</string>
+    <string name="hospital_login">Hospital:</string>
+    <string name="select_a_visit_date">Select a visit date</string>
+    <string name="search_for_user">Search for User</string>
+    <string name="write_a_message">Write a Message</string>
+    <string name="result">Result</string>
+    <string name="morning">Morning</string>
+    <string name="afternoon">Afternoon</string>
+    <string name="_15_00_16_00_17_00">15:00 - 16:00 - 17:00</string>
+    <string name="_09_00_11_00_12_15">09:00 - 11:00 - 12:15</string>
+    <string name="user_image">User Image</string>
+    <string name="message">Message</string>
+    <string name="filter_by_date">Filter by date:</string>
 </resources>

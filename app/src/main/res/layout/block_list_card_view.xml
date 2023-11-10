@@ -34,7 +34,7 @@
             android:layout_weight="1"
             android:text="@string/name"
             android:textStyle="bold"
-            android:textColor="@color/blue"
+            android:textColor="@color/black"
             android:textSize="18sp"/>
         <TextView
             android:id="@+id/patientVisitorHospitalBlockCardTV"

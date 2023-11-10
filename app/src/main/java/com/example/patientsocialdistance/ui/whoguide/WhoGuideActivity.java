@@ -15,5 +15,6 @@ public class WhoGuideActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_who_guide);
+        binding.setLifecycleOwner(this);
     }
 }
