@@ -52,7 +52,7 @@ public class PatientScheduleActivity extends AppCompatActivity {
     }
 
     private void getVisitsByDate(String selectedDate) {
-        VisitClient.getInstance().GetAllApprovedByDate(Constants.getCurrentUsername(), selectedDate).enqueue(new Callback<>() {
+        VisitClient.getInstance().GetAllApprovedByDate(Constants.getCurrentUsername(context), selectedDate).enqueue(new Callback<>() {
             @Override
             public void onResponse(@NonNull Call<List<VisitDto>> call, @NonNull Response<List<VisitDto>> response) {
                 if (200 == response.code() && null != response.body()) {

@@ -47,12 +47,12 @@ public class AcceptAppointmentsActivity extends AppCompatActivity {
         });
 
         binding.appointmentsRequestedRV.setLayoutManager(new LinearLayoutManager(this));
-        appointViewModel.getAppointments(Constants.getCurrentUsername());
+        appointViewModel.getAppointments(Constants.getCurrentUsername(mContext));
 
         binding.setLifecycleOwner(this);
 
         binding.dateOfVisitFilterIV.setOnClickListener(view -> openCalenderDialog());
-        binding.clearFilterIV.setOnClickListener(view -> appointViewModel.getAppointments(Constants.getCurrentUsername()));
+        binding.clearFilterIV.setOnClickListener(view -> appointViewModel.getAppointments(Constants.getCurrentUsername(mContext)));
 
 
     }

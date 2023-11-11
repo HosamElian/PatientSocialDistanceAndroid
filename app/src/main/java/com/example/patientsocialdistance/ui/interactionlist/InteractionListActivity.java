@@ -38,7 +38,7 @@ public class InteractionListActivity extends AppCompatActivity {
         binding.interactionsRV.setLayoutManager(new LinearLayoutManager(this));
         binding.setLifecycleOwner(this);
 
-        interactionListViewModel.getInteractions();
+        interactionListViewModel.getInteractions(this);
 
     }
 }

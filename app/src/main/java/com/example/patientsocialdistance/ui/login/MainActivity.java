@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.example.patientsocialdistance.R;
@@ -16,6 +17,7 @@ import com.example.patientsocialdistance.pojo.APIResponse.AuthModelResponse;
 import com.example.patientsocialdistance.pojo.DTOs.TokenRequestModel;
 import com.example.patientsocialdistance.ui.list.ListActivity;
 import com.example.patientsocialdistance.ui.register.RegisterActivity;
+import com.example.patientsocialdistance.utilities.Constants;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -46,14 +48,17 @@ public class MainActivity extends AppCompatActivity {
             startActivity(navigationIntent);
         });
     }
-
     private void login() {
-        UserClient.getInstance().Login(new TokenRequestModel("test1@gmail.com", "Password@1"))
+        UserClient.getInstance().Login(new TokenRequestModel(binding.usernameLoginET.getText().toString(),
+                        binding.passwordLoginET.getText().toString()))
                 .enqueue(new Callback<>() {
                     @Override
                     public void onResponse(@NonNull Call<AuthModelResponse> call, @NonNull Response<AuthModelResponse> response) {
-                        navigationIntent = new Intent(context, ListActivity.class);
-                        startActivity(navigationIntent);
+                       if(200 == response.code()){
+                           navigationIntent = new Intent(context, ListActivity.class);
+                           startActivity(navigationIntent);
+                           storeUserDate(binding.usernameLoginET.getText().toString());
+                       }
                     }
 
                     @Override
@@ -61,6 +66,12 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(context, "Invalid Operation", Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+    private void storeUserDate(String email) {
+        String[] username = email.split("@");
+        Log.d("login", "storeUserDate: "+ username[0]);
+        Constants.saveUserName(context, username[0]);
     }
 
     // TODO: validation for login

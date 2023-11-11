@@ -82,7 +82,7 @@ public class VisitScheduleActivity extends AppCompatActivity {
 
         binding.requestVisitBT.setOnClickListener(view -> {
             VisitClient.getInstance().ReserveVisit(new VisitDto(
-                    Constants.getCurrentUsername(),
+                    Constants.getCurrentUsername(context),
                     binding.userET.getText().toString(),
                     binding.dateOfVisitTV.getText().toString(),
                     binding.messageOfVisitTV.getText().toString()

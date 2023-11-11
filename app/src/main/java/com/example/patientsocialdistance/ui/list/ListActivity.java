@@ -67,7 +67,7 @@ public class ListActivity extends AppCompatActivity {
             startActivity(navigationIntent);
         });
 
-        getNumberOfUser(Constants.getCurrentUsername());
+        getNumberOfUser(Constants.getCurrentUsername(this));
     }
 
     private void getNumberOfUser(String username){

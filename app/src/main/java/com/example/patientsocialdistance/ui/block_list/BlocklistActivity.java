@@ -37,7 +37,7 @@ public class BlocklistActivity extends AppCompatActivity {
         });
 
         binding.blocksRV.setLayoutManager(new LinearLayoutManager(this));
-        blockListViewModel.getBlockedUser(Constants.getCurrentUsername());
+        blockListViewModel.getBlockedUser(Constants.getCurrentUsername(this));
         binding.setLifecycleOwner(this);
 
     }
