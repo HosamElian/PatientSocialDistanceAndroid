@@ -57,10 +57,7 @@ public class AcceptAppointmentsActivity extends AppCompatActivity {
 
         binding.dateOfVisitFilterIV.setOnClickListener(view -> openCalenderDialog());
         binding.clearFilterIV.setOnClickListener(view -> appointViewModel.getAppointments(new GetVisitsRequest(Constants.getCurrentUsername(mContext), false)));
-//        binding.dateOfVisitFilterIV.setOnClickListener(view -> {
-//            appointViewModel.getAppointmentsByDate(new GetVisitByDateRequest(Constants.getCurrentUsername(mContext),
-//                    false , ""));
-//        });
+
 
     }
 

@@ -25,7 +25,6 @@ public class VisitAcceptAppointmentViewModel extends ViewModel {
     public MutableLiveData<ArrayList<VisitorRequestVisitDTO>> appointmentDtoMutableLiveData = new MutableLiveData<>();
 
     public void getAppointments(GetVisitsRequest request){ getFromDatabase(request);}
-    public void getAppointmentsByDate(GetVisitByDateRequest request){ getFromDatabaseByDate(request);}
 
     private void getFromDatabase(GetVisitsRequest request){
         VisitClient.getInstance().GetAllVisits(request).enqueue(new Callback<>() {
@@ -39,23 +38,6 @@ public class VisitAcceptAppointmentViewModel extends ViewModel {
 
             @Override
             public void onFailure(@NonNull Call<List<VisitorRequestVisitDTO>> call, @NonNull Throwable t) {
-
-            }
-        });
-    }
-    private void getFromDatabaseByDate(GetVisitByDateRequest request){
-        VisitClient.getInstance().GetAllVisitsByDate(request).enqueue(new Callback<>() {
-            @Override
-            public void onResponse(@NonNull Call<List<VisitsAcceptedDTO>> call, @NonNull Response<List<VisitsAcceptedDTO>> response) {
-                if (200 == response.code() && null != response.body()) {
-                    ArrayList<VisitsAcceptedDTO> listReceived = new ArrayList<>(response.body());
-                    ArrayList<VisitorRequestVisitDTO> list = new ArrayList<>(mapVisitsAcceptedDTOToVisitorRequestVisitDTOCollection(listReceived));
-                    appointmentDtoMutableLiveData.setValue(list);
-                }
-            }
-
-            @Override
-            public void onFailure(@NonNull Call<List<VisitsAcceptedDTO>> call, @NonNull Throwable t) {
 
             }
         });

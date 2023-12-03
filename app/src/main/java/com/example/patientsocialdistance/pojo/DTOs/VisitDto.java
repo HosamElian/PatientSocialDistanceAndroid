@@ -1,12 +1,13 @@
 package com.example.patientsocialdistance.pojo.DTOs;
 
 public class VisitDto {
-    public VisitDto(String VisitedUsername, String VisitorUsername, String visitDate, String message) {
+    public VisitDto(String VisitedUsername, String VisitorUsername, String visitDate, String message, String visitTime) {
         this.visitedUsername = VisitedUsername;
         this.visitorUsername = VisitorUsername;
         this.visitDate = visitDate;
 //        this.reason = reason;
         this.message = message;
+        this.visitTime = visitTime;
     }
 
     public String getVisitedUsername() {
@@ -46,4 +47,5 @@ public class VisitDto {
     public String visitDate;
 //    public String reason;
     public String message;
+    public String visitTime;
 }

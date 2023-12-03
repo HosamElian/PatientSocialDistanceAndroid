@@ -7,20 +7,21 @@
     android:background="@color/bar_color"
     android:layout_margin="10dp"
     android:gravity="center">
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:background="@color/white"
-        android:layout_margin="10dp"
-        android:gravity="center">
-        <ImageView
-            android:id="@+id/patientVisitorImageIV"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@mipmap/ic_face"/>
-    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_weight="1"-->
+<!--        android:orientation="vertical"-->
+<!--        android:background="@color/white"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:gravity="center">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/patientVisitorImageIV"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:background="@mipmap/ic_face" />-->
+<!--    </LinearLayout>-->
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"

@@ -2,9 +2,11 @@ package com.example.patientsocialdistance.ui.patient_schedule;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -13,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.patientsocialdistance.R;
 import com.example.patientsocialdistance.pojo.DTOs.VisitDto;
 import com.example.patientsocialdistance.pojo.DTOs.VisitsAcceptedDTO;
+import com.example.patientsocialdistance.utilities.ImageHandler;
 
 import java.util.ArrayList;
 import java.util.List;

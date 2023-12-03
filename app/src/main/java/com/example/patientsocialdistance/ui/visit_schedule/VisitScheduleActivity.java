@@ -90,8 +90,9 @@ public class VisitScheduleActivity extends AppCompatActivity {
             VisitClient.getInstance().ReserveVisit(new VisitDto(
                     Constants.getCurrentUsername(context),
                     binding.userET.getText().toString(),
-                    (realDate + realTime),
-                    binding.messageOfVisitTV.getText().toString()
+                    currentDate ,
+                    binding.messageOfVisitTV.getText().toString(),
+                    currentTime
             )).enqueue(new Callback<>() {
                 @Override
                 public void onResponse(@NonNull Call<VisitDto> call, @NonNull Response<VisitDto> response) {
@@ -135,7 +136,7 @@ public class VisitScheduleActivity extends AppCompatActivity {
         calendar.setTime(date);
         @SuppressLint("SetTextI18n") DatePickerDialog dialog = new DatePickerDialog(this,
                 (datePicker, year, month, day) ->{
-                    realDate = year+ "" + month + "" + day;
+//                    realDate = year+ "" + month + "" + day;
                     currentDate = day + "/" + month + "/" + year;
                     binding.dateOfVisitTV.setText(currentDate + " " + currentTime);
                 } ,
@@ -164,7 +165,7 @@ public class VisitScheduleActivity extends AppCompatActivity {
                     else {
                         hourAsTwoDigit = String.valueOf(hourOfDay);
                     }
-                    realTime = hourAsTwoDigit+minute+"00";
+//                    realTime = hourAsTwoDigit+minute+"00";
                     currentTime = " " + hourAsTwoDigit + ":" + minute + ":00 " + AMOrPM;
                     binding.dateOfVisitTV.setText(currentDate +  currentTime);
                 }
