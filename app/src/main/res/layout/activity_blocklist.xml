@@ -26,46 +26,93 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="5"
+            android:layout_weight="8"
             android:orientation="vertical"
             android:background="@drawable/rounded_border_white">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
-                android:orientation="horizontal"
-                android:layout_margin="5dp"
+                android:layout_weight="2"
+                android:orientation="vertical"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_border_white_black_round"
                 tools:ignore="NestedWeights">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="3"
-                    android:text="@string/blocklist"
-                    android:textColor="@color/blue"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="28sp"
-                    android:layout_margin="10dp"
-                    android:padding="10dp" />
-
-                <TextView
-                    android:id="@+id/blockNumberTV"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_margin="10dp"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:background="@drawable/circle_border_red_degree"
-                    android:gravity="center"
-                    android:textColor="@color/white"
-                    android:textSize="24sp" />
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    tools:ignore="NestedWeights">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:text="@string/blocklist"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="28sp"
+                        android:layout_margin="10dp"
+                        android:padding="10dp" />
+
+                    <TextView
+                        android:id="@+id/blockNumberTV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/circle_border_red_degree"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="24sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/nameOfBlockedUserMakingET"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="3"
+                        android:hint="Write name"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/blockMakingSearchTV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/ic_search"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="30sp" />
+                    <TextView
+                        android:id="@+id/blockMakingTV"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_border_red_degree"
+                        android:gravity="center"
+                        android:text="@string/block"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+                </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="4"
+                android:layout_marginTop="10dp"
                 android:orientation="horizontal">
 
                 <androidx.recyclerview.widget.RecyclerView

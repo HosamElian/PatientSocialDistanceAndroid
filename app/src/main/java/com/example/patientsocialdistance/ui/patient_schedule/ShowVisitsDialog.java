@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.patientsocialdistance.R;
 import com.example.patientsocialdistance.pojo.DTOs.UserForSearchDTO;
 import com.example.patientsocialdistance.pojo.DTOs.VisitDto;
+import com.example.patientsocialdistance.pojo.DTOs.VisitsAcceptedDTO;
 import com.example.patientsocialdistance.ui.visit_schedule.VisitScheduleAdapter;
 import com.example.patientsocialdistance.ui.visit_schedule.interfaces.OnAdapterItemClicked;
 import com.example.patientsocialdistance.ui.visit_schedule.interfaces.OnReceivedData;
@@ -19,10 +20,10 @@ import java.util.ArrayList;
 
 public abstract class ShowVisitsDialog extends AlertDialog {
 
-    private final ArrayList<VisitDto> mList;
+    private final ArrayList<VisitsAcceptedDTO> mList;
     private ShowVisitsAdapter adapter;
 
-    public ShowVisitsDialog(Context context, ArrayList<VisitDto> list) {
+    public ShowVisitsDialog(Context context, ArrayList<VisitsAcceptedDTO> list) {
         super(context);
         this.mList = list;
     }

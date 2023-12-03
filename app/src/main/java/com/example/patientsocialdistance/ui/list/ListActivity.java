@@ -12,6 +12,7 @@ import com.example.patientsocialdistance.R;
 import com.example.patientsocialdistance.data.Clients.BlockClient;
 import com.example.patientsocialdistance.databinding.ActivityListBinding;
 import com.example.patientsocialdistance.pojo.DTOs.BlockedUserDTO;
+import com.example.patientsocialdistance.ui.notification.NotificationActivity;
 import com.example.patientsocialdistance.ui.accept_appointments.AcceptAppointmentsActivity;
 import com.example.patientsocialdistance.ui.block_list.BlocklistActivity;
 import com.example.patientsocialdistance.ui.interactionlist.InteractionListActivity;
@@ -54,6 +55,10 @@ public class ListActivity extends AppCompatActivity {
 
         binding.acceptAppointmentsTV.setOnClickListener(view -> {
             navigationIntent = new Intent(this, AcceptAppointmentsActivity.class);
+            startActivity(navigationIntent);
+        });
+        binding.notificationsTV.setOnClickListener(view -> {
+            navigationIntent = new Intent(this, NotificationActivity.class);
             startActivity(navigationIntent);
         });
 

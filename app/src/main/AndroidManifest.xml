@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,32 +17,42 @@
         android:theme="@style/Theme.PatientSocialDistance"
         tools:targetApi="31">
         <activity
-            android:name=".ui.patient_schedule.PatientScheduleActivity"
+            android:name=".ui.notification.NotificationActivity"
             android:exported="false" />
+        <activity
+            android:name=".ui.patient_schedule.PatientScheduleActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ui.accept_appointments.AcceptAppointmentsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ui.visit_schedule.VisitScheduleActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ui.block_list.BlocklistActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ui.whoguide.WhoGuideActivity"
             android:exported="false" />
         <activity
             android:name=".ui.interactionlist.InteractionListActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ui.list.ListActivity"
             android:exported="false" />
         <activity
             android:name=".ui.register.RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".ui.login.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

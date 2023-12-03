@@ -9,5 +9,6 @@ public class AuthModelResponse {
     public String message ;
     public String token ;
     public String expiresOn ;
+    public String image ;
     public List<String> roles ;
 }

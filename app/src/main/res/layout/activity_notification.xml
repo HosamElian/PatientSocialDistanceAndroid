@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="notificationViewModel"
+            type="com.example.patientsocialdistance.ui.notification.NotificationViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.notification.NotificationActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            tools:ignore="NestedWeights">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:text="@string/notification"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="28sp"
+                android:layout_margin="10dp"
+                android:padding="10dp" />
+
+        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:orientation="horizontal"
+        android:layout_margin="5dp"
+        tools:ignore="NestedWeights">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/notificationRV"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </LinearLayout>
+    </LinearLayout>
+</layout>

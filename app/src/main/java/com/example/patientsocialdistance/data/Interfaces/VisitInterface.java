@@ -1,12 +1,12 @@
 package com.example.patientsocialdistance.data.Interfaces;
 
 
-import com.example.patientsocialdistance.pojo.APIResponse.AuthModelResponse;
-import com.example.patientsocialdistance.pojo.DTOs.RegisterModelDTO;
-import com.example.patientsocialdistance.pojo.DTOs.TokenRequestModel;
+import com.example.patientsocialdistance.pojo.DTOs.GetVisitByDateRequest;
+import com.example.patientsocialdistance.pojo.DTOs.GetVisitsRequest;
 import com.example.patientsocialdistance.pojo.DTOs.VisitApprovalDTO;
 import com.example.patientsocialdistance.pojo.DTOs.VisitDto;
-import com.example.patientsocialdistance.pojo.DTOs.VisitorDto;
+import com.example.patientsocialdistance.pojo.DTOs.VisitorRequestVisitDTO;
+import com.example.patientsocialdistance.pojo.DTOs.VisitsAcceptedDTO;
 
 import java.util.List;
 
@@ -15,22 +15,16 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
-import retrofit2.http.Query;
 
 public interface VisitInterface {
-    @GET("GetAllApprovedByDate")
+    @POST("GetAllVisitsByDate")
     @Headers("Content-Type: application/json")
-    public Call<List<VisitDto>> GetAllApprovedByDate (@Query("username") String username,
-                                           @Query("date") String date);
+    public Call<List<VisitsAcceptedDTO>> GetAllVisitsByDate(@Body GetVisitByDateRequest request);
 
-//    @GET("GetAllNotApprovedByDate")
-//    @Headers("Content-Type: application/json")
-//    public Call<List<VisitDto>> GetAllNotApprovedByDate (@Query("username") String username,
-//                                           @Query("date") String date);
 
-    @GET("GetAllNotApprovedVisits")
+    @POST("GetAllVisits")
     @Headers("Content-Type: application/json")
-    public Call<List<VisitorDto>> GetAllNotApprovedVisits (@Query("username") String username);
+    public Call<List<VisitorRequestVisitDTO>> GetAllVisits (@Body GetVisitsRequest request);
 
     @POST("ReserveVisit")
     @Headers("Content-Type: application/json")

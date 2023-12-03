@@ -14,16 +14,17 @@
         android:orientation="vertical"
         tools:context=".ui.visit_schedule.VisitScheduleActivity">
 
-        <ImageView
-            android:id="@+id/userImageIV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="25dp"
-            android:background="@color/white"
-            android:padding="40dp"
-            android:scaleType="center"
-            android:src="@mipmap/ic_face" />
+<!--        <ImageView-->
+<!--            android:id="@+id/userImageIV"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="25dp"-->
+<!--            android:background="@color/white"-->
+<!--            android:padding="40dp"-->
+<!--            android:scaleType="center"-->
+<!--            android:src="@mipmap/ic_face" />-->
+
 
 
         <LinearLayout
@@ -32,6 +33,7 @@
             android:layout_weight="5"
             android:background="@drawable/rounded_border_white"
             android:gravity="center"
+            android:layout_marginTop="20dp"
             android:orientation="vertical"
             tools:ignore="NestedWeights">
 
@@ -119,6 +121,15 @@
                     android:textColor="@color/black"
                     android:textSize="24sp" />
 
+                <ImageView
+                    android:id="@+id/timeOfVisitIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/calender"
+                    android:scaleType="center"
+                    android:src="@mipmap/ic_time"
+                    android:layout_marginEnd="20dp"/>
                 <ImageView
                     android:id="@+id/dateOfVisitIV"
                     android:layout_width="wrap_content"

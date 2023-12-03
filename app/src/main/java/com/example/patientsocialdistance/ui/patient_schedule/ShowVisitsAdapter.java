@@ -12,14 +12,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.patientsocialdistance.R;
 import com.example.patientsocialdistance.pojo.DTOs.VisitDto;
+import com.example.patientsocialdistance.pojo.DTOs.VisitsAcceptedDTO;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ShowVisitsAdapter extends RecyclerView.Adapter<ShowVisitsAdapter.ShowVisitViewHolder>{
-    List<VisitDto> mList;
+    List<VisitsAcceptedDTO> mList;
     Context mContext;
-    public ShowVisitsAdapter(Context context, ArrayList<VisitDto> list){
+    public ShowVisitsAdapter(Context context, ArrayList<VisitsAcceptedDTO> list){
         this.mContext = context;
         this.mList = list;
     }
@@ -36,7 +37,9 @@ public class ShowVisitsAdapter extends RecyclerView.Adapter<ShowVisitsAdapter.Sh
     @Override
     public void onBindViewHolder(@NonNull ShowVisitViewHolder holder, int position) {
         holder.nameTV.setText(mList.get(position).getVisitorUsername());
-        holder.dateTV.setText(mList.get(position).getVisitDate());
+        holder.dateTV.setText(mList.get(position).getStartDate());
+        holder.timeTV.setText(String.valueOf(mList.get(position).getStartTime()));
+        holder.durationTV.setText(String.valueOf(mList.get(position).getDurationInMinutes()));
         holder.MessageTV.setText(mList.get(position).getMessage());
     }
 
@@ -46,17 +49,19 @@ public class ShowVisitsAdapter extends RecyclerView.Adapter<ShowVisitsAdapter.Sh
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    public void setList(ArrayList<VisitDto> list) {
+    public void setList(ArrayList<VisitsAcceptedDTO> list) {
         this.mList = list;
         notifyDataSetChanged();
     }
     public static class ShowVisitViewHolder extends RecyclerView.ViewHolder {
-        TextView nameTV, dateTV, MessageTV;
+        TextView nameTV, dateTV, timeTV, durationTV, MessageTV;
 
         public ShowVisitViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTV = itemView.findViewById(R.id.patientVisitorNamePatientScheduleCardTV);
             dateTV = itemView.findViewById(R.id.patientVisitorDatePatientScheduleCardTV);
+            timeTV = itemView.findViewById(R.id.patientVisitorTimePatientScheduleCardTV);
+            durationTV = itemView.findViewById(R.id.patientVisitorDurationPatientScheduleCardTV);
             MessageTV = itemView.findViewById(R.id.patientVisitorMessagePatientScheduleCardTV);
         }
     }

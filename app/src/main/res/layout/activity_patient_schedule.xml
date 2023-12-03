@@ -30,11 +30,11 @@
                 android:layout_margin="10dp"
                 android:gravity="center"
                 tools:ignore="NestedWeights">
+
                 <ImageView
                     android:id="@+id/patientVisitorImageIV"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@mipmap/ic_face"
                     android:contentDescription="@string/user_image"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
@@ -58,17 +58,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:text="@string/hospital"
+                    android:text=""
                     android:textColor="@color/white"
                     android:textSize="18sp"/>
-                <TextView
-                    android:id="@+id/patientVisitorPhoneNumberTV"
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/phone_number"
-                    android:textColor="@color/white"
-                    android:textSize="18sp"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/patientVisitorPhoneNumberTV"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/phone_number"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="18sp"/>-->
             </LinearLayout>
 
         </LinearLayout>

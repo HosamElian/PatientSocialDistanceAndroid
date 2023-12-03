@@ -2,9 +2,12 @@ package com.example.patientsocialdistance.data.Clients;
 
 import com.example.patientsocialdistance.data.Interfaces.VisitInterface;
 import com.example.patientsocialdistance.data.netwrokaccess.UnsafeOkHttpClient;
+import com.example.patientsocialdistance.pojo.DTOs.GetVisitByDateRequest;
+import com.example.patientsocialdistance.pojo.DTOs.GetVisitsRequest;
 import com.example.patientsocialdistance.pojo.DTOs.VisitApprovalDTO;
 import com.example.patientsocialdistance.pojo.DTOs.VisitDto;
-import com.example.patientsocialdistance.pojo.DTOs.VisitorDto;
+import com.example.patientsocialdistance.pojo.DTOs.VisitorRequestVisitDTO;
+import com.example.patientsocialdistance.pojo.DTOs.VisitsAcceptedDTO;
 import com.example.patientsocialdistance.utilities.Constants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -40,15 +43,12 @@ public class VisitClient {
         }
         return Instance;
     }
-    public Call<List<VisitDto>> GetAllApprovedByDate(String username, String date) {
-        return visitInterface.GetAllApprovedByDate(username, date);
+    public Call<List<VisitsAcceptedDTO>> GetAllVisitsByDate(GetVisitByDateRequest request) {
+        return visitInterface.GetAllVisitsByDate(request);
     }
-//    public Call<List<VisitDto>> GetAllNotApprovedByDate(String username, String date) {
-//        return visitInterface.GetAllNotApprovedByDate(username, date);
-//    }
 
-    public Call<List<VisitorDto>> GetAllNotApprovedVisits(String username) {
-        return visitInterface.GetAllNotApprovedVisits(username);
+    public Call<List<VisitorRequestVisitDTO>> GetAllVisits(GetVisitsRequest request) {
+        return visitInterface.GetAllVisits(request);
     }
     public Call<VisitDto> ReserveVisit(VisitDto model) {
         return visitInterface.ReserveVisit(model);

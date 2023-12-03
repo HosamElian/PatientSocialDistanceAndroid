@@ -2,6 +2,7 @@ package com.example.patientsocialdistance.data.Interfaces;
 
 
 import com.example.patientsocialdistance.pojo.APIResponse.AuthModelResponse;
+import com.example.patientsocialdistance.pojo.DTOs.BlockUserDTO;
 import com.example.patientsocialdistance.pojo.DTOs.BlockedUserDTO;
 import com.example.patientsocialdistance.pojo.DTOs.RegisterModelDTO;
 import com.example.patientsocialdistance.pojo.DTOs.TokenRequestModel;
@@ -18,10 +19,6 @@ import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 public interface BlockInterface {
-//
-//    @POST("LoginAndroid")
-//    @Headers("Content-Type: application/json")
-//    public Call<String> login(@Body User user);
 
 
     @GET("GetAllByUser")
@@ -30,7 +27,7 @@ public interface BlockInterface {
 
 
 
-//    @POST("login")
-//    @Headers("Content-Type: application/json")
-//    public Call<AuthModelResponse> login (@Body TokenRequestModel model);
+    @POST("CreateOrDeleteBlock")
+    @Headers("Content-Type: application/json")
+    public Call<BlockUserDTO> CreateOrDeleteBlock (@Body BlockUserDTO model);
 }

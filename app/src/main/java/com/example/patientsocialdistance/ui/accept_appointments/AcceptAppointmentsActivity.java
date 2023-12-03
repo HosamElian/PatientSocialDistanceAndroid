@@ -14,7 +14,10 @@ import android.widget.Toast;
 
 import com.example.patientsocialdistance.R;
 import com.example.patientsocialdistance.databinding.ActivityAcceptAppointmentsBinding;
+import com.example.patientsocialdistance.pojo.DTOs.GetVisitByDateRequest;
+import com.example.patientsocialdistance.pojo.DTOs.GetVisitsRequest;
 import com.example.patientsocialdistance.pojo.DTOs.VisitorDto;
+import com.example.patientsocialdistance.pojo.DTOs.VisitorRequestVisitDTO;
 import com.example.patientsocialdistance.utilities.Constants;
 
 import java.util.ArrayList;
@@ -24,6 +27,7 @@ import java.util.GregorianCalendar;
 
 public class AcceptAppointmentsActivity extends AppCompatActivity {
     Calendar calendar;
+    String date;
     Context mContext;
     VisitAcceptAppointmentViewModel appointViewModel;
     ActivityAcceptAppointmentsBinding binding;
@@ -39,21 +43,24 @@ public class AcceptAppointmentsActivity extends AppCompatActivity {
         VisitAcceptAppointmentListAdapter adapter = new VisitAcceptAppointmentListAdapter();
         binding.appointmentsRequestedRV.setAdapter(adapter);
 
-        appointViewModel.appointmentDtoMutableLiveData.observe(this, new Observer<ArrayList<VisitorDto>>() {
+        appointViewModel.appointmentDtoMutableLiveData.observe(this, new Observer<ArrayList<VisitorRequestVisitDTO>>() {
             @Override
-            public void onChanged(ArrayList<VisitorDto> visitorDtos) {
+            public void onChanged(ArrayList<VisitorRequestVisitDTO> visitorDtos) {
                 adapter.setList(visitorDtos);
             }
         });
 
         binding.appointmentsRequestedRV.setLayoutManager(new LinearLayoutManager(this));
-        appointViewModel.getAppointments(Constants.getCurrentUsername(mContext));
+        appointViewModel.getAppointments(new GetVisitsRequest(Constants.getCurrentUsername(mContext), false));
 
         binding.setLifecycleOwner(this);
 
         binding.dateOfVisitFilterIV.setOnClickListener(view -> openCalenderDialog());
-        binding.clearFilterIV.setOnClickListener(view -> appointViewModel.getAppointments(Constants.getCurrentUsername(mContext)));
-
+        binding.clearFilterIV.setOnClickListener(view -> appointViewModel.getAppointments(new GetVisitsRequest(Constants.getCurrentUsername(mContext), false)));
+//        binding.dateOfVisitFilterIV.setOnClickListener(view -> {
+//            appointViewModel.getAppointmentsByDate(new GetVisitByDateRequest(Constants.getCurrentUsername(mContext),
+//                    false , ""));
+//        });
 
     }
 
@@ -62,8 +69,9 @@ public class AcceptAppointmentsActivity extends AppCompatActivity {
         calendar = new GregorianCalendar();
         calendar.setTime(date);
         @SuppressLint("SetTextI18n") DatePickerDialog dialog = new DatePickerDialog(this,
-                (datePicker, year, month, day) ->
-                        Toast.makeText(mContext, day + "/" + month + "/" + year, Toast.LENGTH_SHORT).show(),
+                (datePicker, year, month, day) ->{
+                    Toast.makeText(mContext, day + "/" + month + "/" + year, Toast.LENGTH_SHORT).show();
+                },
                 calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH));
         dialog.show();
     }

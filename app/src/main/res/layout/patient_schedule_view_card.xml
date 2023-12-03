@@ -42,7 +42,23 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="@string/hospital"
+            android:text="@string/date"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/patientVisitorTimePatientScheduleCardTV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/time"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+        <TextView
+            android:id="@+id/patientVisitorDurationPatientScheduleCardTV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/duration"
             android:textColor="@color/white"
             android:textSize="18sp"/>
         <TextView

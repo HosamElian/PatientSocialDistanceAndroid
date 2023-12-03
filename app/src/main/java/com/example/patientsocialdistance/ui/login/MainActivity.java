@@ -49,12 +49,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     private void login() {
-        UserClient.getInstance().Login(new TokenRequestModel(binding.usernameLoginET.getText().toString(),
-                        binding.passwordLoginET.getText().toString()))
+        UserClient.getInstance().Login(new TokenRequestModel("test3",
+                        "Password@1"))
                 .enqueue(new Callback<>() {
                     @Override
                     public void onResponse(@NonNull Call<AuthModelResponse> call, @NonNull Response<AuthModelResponse> response) {
-                       if(200 == response.code()){
+                       if(200 == response.code() && null != response.body()){
+                           Constants.saveUserImage(context, response.body().image);
                            navigationIntent = new Intent(context, ListActivity.class);
                            startActivity(navigationIntent);
                            storeUserDate(binding.usernameLoginET.getText().toString());
@@ -68,10 +69,9 @@ public class MainActivity extends AppCompatActivity {
                 });
     }
 
-    private void storeUserDate(String email) {
-        String[] username = email.split("@");
-        Log.d("login", "storeUserDate: "+ username[0]);
-        Constants.saveUserName(context, username[0]);
+    private void storeUserDate(String username) {
+        Log.d("login", "storeUserDate: "+ username);
+        Constants.saveUserName(context, username);
     }
 
     // TODO: validation for login

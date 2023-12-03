@@ -83,8 +83,9 @@ public class RegisterModelDTO {
     public String nationalId ;
     public String nationality ;
     public String hospital ;
+    public String image;
 
-    public RegisterModelDTO(int userTypeId, String password, int age, String name, String email, String username, String nationalId, String nationality, String hospital) {
+    public RegisterModelDTO(int userTypeId, String password, int age, String name, String email, String username, String nationalId, String nationality, String hospital, String image) {
         this.userTypeId = userTypeId;
         this.password = password;
         this.age = age;
@@ -94,5 +95,6 @@ public class RegisterModelDTO {
         this.nationalId = nationalId;
         this.nationality = nationality;
         this.hospital = hospital;
+        this.image = image;
     }
 }
